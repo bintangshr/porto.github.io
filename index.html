@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <style>
-        /* --- CSS GALAXY THEME --- */
+        
         :root {
             --primary-color: #00d2ff;
             --secondary-color: #928dab;
@@ -26,7 +26,7 @@
             background-color: var(--bg-dark); color: #fff; overflow-x: hidden;
         }
 
-        /* BACKGROUND STARS ANIMATION */
+        
         #stars-container {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             z-index: -1; overflow: hidden;
@@ -47,7 +47,7 @@
             to { transform: translateY(-2000px); }
         }
 
-        /* UTILITIES */
+        
         .container { width: 90%; max-width: 1200px; margin: auto; padding: 50px 0; }
         h2 { font-size: 2.5rem; margin-bottom: 30px; text-align: center; background: linear-gradient(to right, var(--primary-color), #3a7bd5); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         a { text-decoration: none; }
@@ -56,7 +56,7 @@
         .btn-outline { background: transparent; border: 2px solid var(--primary-color); color: var(--primary-color); }
         .btn-outline:hover { background: var(--primary-color); color: #fff; }
 
-        /* HERO SECTION */
+        
         .hero {
             height: 100vh; display: flex; align-items: center; justify-content: center;
             text-align: center; position: relative;
@@ -71,38 +71,38 @@
         }
         @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
 
-        /* GLASS CARDS (About, Skills, Projects) */
+       
         .glass-card {
             background: var(--glass-bg); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
             border-radius: 20px; border: 1px solid var(--glass-border); padding: 40px;
             margin-bottom: 30px; transition: 0.3s;
         }
         
-        /* SKILLS */
+        
         .skills-grid { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; }
         .skill-tag {
             background: rgba(0, 210, 255, 0.1); padding: 10px 20px; border-radius: 30px;
             border: 1px solid var(--primary-color); font-weight: 600; display: flex; align-items: center; gap: 10px;
         }
 
-        /* PROJECTS */
+       
         .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
         .project-card {
             background: var(--glass-bg); border-radius: 20px; overflow: hidden;
             border: 1px solid var(--glass-border); transition: all 0.3s ease;
             position: relative;
         }
-        /* Efek tilt JavaScript akan ditambahkan di sini */
+        
         .project-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.5); }
         .project-content { padding: 30px; }
         .project-content h3 { margin-bottom: 15px; color: var(--primary-color); }
         .project-content p { color: var(--secondary-color); margin-bottom: 20px; line-height: 1.6; }
         .tech-stack small { display: inline-block; background: rgba(255,255,255,0.1); padding: 5px 10px; border-radius: 10px; margin-right: 5px; margin-bottom: 5px; font-size: 0.8rem; }
 
-        /* FOOTER */
+        
         footer { text-align: center; padding: 30px; color: var(--secondary-color); font-size: 0.9rem; }
 
-        /* RESPONSIVE */
+        
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.5rem; }
             .hero p { font-size: 1.2rem; }
@@ -174,12 +174,18 @@
 
             <div class="project-card" data-tilt>
                 <div class="project-content">
-                    <h3>📱 [NAMA PROYEK REACT NATIVE/TUGAS]</h3>
-                    <p>Contoh: Eksplorasi UI aplikasi mobile sederhana dengan React Native. Menampilkan list data dan navigasi antar layar dasar.</p>
+                    <h3>🗺️ Symphony Surabaya</h3>
+                    <p>Aplikasi Android Native sebagai panduan wisata kota Surabaya. Menyajikan daftar rekomendasi kuliner, tempat wisata, dan <em>place to go</em> populer untuk memudahkan eksplorasi pengguna.</p>
+                    
                     <div class="tech-stack mb-3">
-                        <small>React Native</small> <small>JavaScript</small>
+                        <small>Android Native</small> 
+                        <small>Kotlin/Java</small> 
+                        <small>XML Layout</small>
                     </div>
-                    <a href="https://github.com/bintangshr/NAMA-REPO-KAMU-2" target="_blank" class="btn btn-outline w-100">Lihat Source Code <i class="fas fa-arrow-right"></i></a>
+
+                    <a href="https://github.com/bintangshr/Symphony" target="_blank" class="btn btn-outline w-100">
+                        Lihat Source Code <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
 
@@ -193,14 +199,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
     <script>
         VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
-            max: 10, // Maksimal kemiringan
-            speed: 400, // Kecepatan efek
-            glare: true, // Efek kilau
+            max: 10, 
+            speed: 400, 
+            glare: true, 
             "max-glare": 0.3,
         });
     </script>
 
 </body>
 </html>
+
 
 
